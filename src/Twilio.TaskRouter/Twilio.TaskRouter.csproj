@@ -54,6 +54,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ENTERPRISE-net4.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="JWT">
       <HintPath>..\packages\JWT.1.3.2\lib\3.5\JWT.dll</HintPath>
@@ -127,6 +133,7 @@
     <Compile Include="Events.Async.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ENTERPRISE-net4.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

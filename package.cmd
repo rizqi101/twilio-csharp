@@ -1,3 +1,8 @@
+REM
+REM Updated by MFR "Why does no on check the master builds?"
+REM 11Aug2015 MFR - 'cause I get things done
+REM 
+
 tools\nuget.exe update -self
 
 rd download /s /q
@@ -48,17 +53,17 @@ if not exist download\package\twiliomonitor\lib\3.5 mkdir download\package\twili
 REM tools\ilmerge.exe /lib:src\Twilio.Api\bin\Release /internalize /ndebug /v2 /out:download\Twilio.Api.dll Twilio.Api.dll RestSharp.dll
 REM tools\ilmerge.exe /lib:src\Twilio.Api.Silverlight\bin\Release /internalize /ndebug /targetplatform:v4,"C:\Program Files (x86)\Microsoft Silverlight\4.1.10111.0" /out:download\Twilio.Api.Silverlight.dll RestSharp.Silverlight.dll
 
-copy src\Twilio.Api\bin\Release\*.* download
-copy src\Twilio.Api.Silverlight\bin\Release\*.* download\Silverlight\
-copy src\Twilio.Api.WindowsPhone\bin\Release\*.* download\WindowsPhone\
-copy src\Twilio.Mvc\bin\Release\*.* download
-copy src\Twilio.Twiml\bin\Release\*.* download
-copy src\Twilio.WebMatrix\bin\Release\*.* download
-copy src\Twilio.Client.Capability\bin\Release\*.* download
-copy src\Twilio.TaskRouter\bin\Release\*.* download
-copy src\Twilio.Lookups\bin\Release\*.* download
-copy src\Twilio.Pricing\bin\Release\*.* download
-copy src\Twilio.Monitor\bin\Release\*.* download
+copy src\Twilio.Api\bin\x64\Release\*.* download
+copy src\Twilio.Api.Silverlight\bin\x64\Release\*.* download\Silverlight\
+copy src\Twilio.Api.WindowsPhone\bin\x64\Release\*.* download\WindowsPhone\
+copy src\Twilio.Mvc\bin\x64\Release\*.* download
+copy src\Twilio.Twiml\bin\x64\Release\*.* download
+copy src\Twilio.WebMatrix\bin\x64\Release\*.* download
+copy src\Twilio.Client.Capability\bin\x64\Release\*.* download
+copy src\Twilio.TaskRouter\bin\x64\Release\*.* download
+copy src\Twilio.Lookups\bin\x64\Release\*.* download
+copy src\Twilio.Pricing\bin\x64\Release\*.* download
+copy src\Twilio.Monitor\bin\x64\Release\*.* download
 copy LICENSE.txt download
 
 copy src\Twilio.Api\bin\Release\Twilio.Api.* download\package\twilio\lib\3.5\
